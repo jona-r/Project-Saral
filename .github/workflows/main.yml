@@ -15,8 +15,6 @@ jobs:
     
     - name: Copy files
       run: |
-        mkdir -p destination_folder
-        cp -r source_folder/* destination_folder
         cp specs/v1.5/swagger-saral-maintenance.yaml ./v1.0/backend/src
         cp specs/v1.5/swagger-saral-frontend.yaml ./v1.0/backend/src
         cp specs/v1.5/swagger-saral-apidoc.yaml ./v1.0/backend/src
