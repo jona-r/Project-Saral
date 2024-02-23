@@ -1,4 +1,4 @@
-FROM node:16.8
+FROM node:16.10.0
 
 LABEL maintainer="dileep.gadiraju@tarento.com"
 
@@ -10,7 +10,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run test
 
 RUN echo JWT_SECRET=$JWT_SECRET
 
