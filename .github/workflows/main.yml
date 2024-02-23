@@ -32,7 +32,7 @@ jobs:
     - name: Build and push Docker image
       run: |
         IMAGE_TAG=$(echo $GITHUB_SHA | cut -c1-7)
-        docker buildx build --platform linux/amd64,linux/arm64 -t jonathanrogers/saral-img:$IMAGE_TAG . --push
+        docker buildx build -f v1.0/backend/Dockerfile . --platform linux/amd64,linux/arm64 -t jonathanrogers/saral-img:$IMAGE_TAG . --push
       env:
         DOCKER_CLI_EXPERIMENTAL: enabled
         DOCKER_BUILDKIT: 1
